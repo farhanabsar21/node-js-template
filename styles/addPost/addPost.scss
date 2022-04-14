@@ -1,0 +1,14 @@
+@import '../base';
+@import './add-post-left';
+@import './add-post-right';
+@import './add-post-center';
+
+.main-container{
+    min-height: calc(max(100vh, 700px));
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    @media screen and (max-width: 600px) {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+}

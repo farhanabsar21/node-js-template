@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/addPost/addPost.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>YY Ventures Admin Dashboard</title>
+</head>
+<body>
+    <!-- main -->
+    <section class="main-container">
+        <aside class="aside-left">
+            <section class="logo-container">
+                <img src="./assets/yyv-logo.png" alt="">
+            </section>
+            <section class="title-container">
+                <h6>CMS Menu</h6>
+            </section>
+            <section class="menu-list">
+                <ul>
+                    <li class="active"><a href="#"><i class="bi bi-columns-gap"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Post</a></li>
+                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Blog</a></li>
+                </ul>
+            </section>
+            <section class="title-container">
+                <h6>Daily Checklist</h6>
+            </section>
+            <section class="post-list">
+                <ul>
+                    <li><a href="#"><i class="bi bi-journal-check"></i> All Posts <span class="notified">24</span></a></li>
+                    <li><a href="#"><i class="bi bi-envelope-check"></i> Newsletters</a></li>
+                    <li><a href="#"><i class="bi bi-list-task"></i> New Blogs</a></li>
+                </ul>
+            </section>
+            <section class="log-out">
+                <button title="logout"><i class="bi bi-box-arrow-left"></i></button>
+            </section>
+        </aside>
+        <main class="main-center">
+            <div class="main-center-header">
+                <h2>Add Post</h2>
+            </div>
+            <div class="main-center-body">
+                <form>
+                    <div class="input-container">
+                        <label>Title:</label>
+                        <input type="text" placeholder="type your title..">
+                    </div>
+                    <div class="input-container">
+                        <label>Email:</label>
+                        <input type="email" placeholder="type your email..">
+                    </div>
+                    <div class="input-container">
+                        <label>Options:</label>
+                        <select>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label>URL:</label>
+                        <input type="url" placeholder="type your link..">
+                    </div>
+                    <div class="input-container">
+                        <label>Date:</label>
+                        <input type="date" placeholder="type your link..">
+                    </div>
+                    <div class="input-container input-container-checkbox">
+                        <label>Mark:</label>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                    </div>
+                    <div class="input-container">
+                        <label>Text:</label>
+                        <input type="text" placeholder="type your text..">
+                    </div>
+                    <div class="input-container">
+                        <label>File:</label>
+                        <input type="file">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside class="aside-right">
+            <div class="profile-header">
+                <div>
+                    <h5>Hi, Admin!</h5>
+                    <p>Good Morning!</p>
+                </div>
+                <div>
+                    <img src="./assets/players/ibrahimovic.jpg" alt="">
+                </div>
+            </div>
+            <div class="featured">
+                <h5>Today's Featured</h5>
+            </div>
+            <div class="profile-body">
+                <div class="featured-img-container">
+                    <img src="./assets/featured.jpg" alt="">
+                </div>
+                <div>
+                    <h6>Mountain With The Sound</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero similique accusantium nihil officia cupiditate!</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+</body>
+</html>
