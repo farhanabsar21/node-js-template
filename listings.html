@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/listings/listings.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>YY Ventures Admin Dashboard</title>
+</head>
+<body>
+    <!-- main -->
+    <section class="main-container">
+        <aside class="aside-left">
+            <section class="logo-container">
+                <img src="./assets/yyv-logo.png" alt="">
+            </section>
+            <section class="title-container">
+                <h6>CMS Menu</h6>
+            </section>
+            <section class="menu-list">
+                <ul>
+                    <li class="active"><a href="#"><i class="bi bi-columns-gap"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Post</a></li>
+                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Blog</a></li>
+                </ul>
+            </section>
+            <section class="title-container">
+                <h6>Daily Checklist</h6>
+            </section>
+            <section class="post-list">
+                <ul>
+                    <li><a href="#"><i class="bi bi-journal-check"></i> All Posts <span class="notified">24</span></a></li>
+                    <li><a href="#"><i class="bi bi-envelope-check"></i> Newsletters</a></li>
+                    <li><a href="#"><i class="bi bi-list-task"></i> New Blogs</a></li>
+                </ul>
+            </section>
+            <section class="log-out">
+                <button title="logout"><i class="bi bi-box-arrow-left"></i></button>
+            </section>
+        </aside>
+        <main class="main-center">
+            <section class="main-center-header">
+                <div>
+                    <h3>Orders</h3>
+                </div>
+                <div class="main-center-header-content flex-around">
+                    <p>welcome, Admin</p>
+                    <img src="./assets/players/ibrahimovic.jpg" alt="">
+                </div>
+            </section>
+            <section class="title-container-1">
+                <h6>Category Listings</h6>
+            </section>
+            <section class="listings-container">
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>K-code</th>
+                        <th>Country</th>
+                        <th>Cost</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>300$</td>
+                        <td class="done">Done</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger ml-1"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                        <td>300$</td>
+                        <td class="done">Done</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger ml-1"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                        <td>300$</td>
+                        <td class="pending">Pending</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger ml-1"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                        <td>300$</td>
+                        <td class="pending">Pending</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger ml-1"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                        <td>300$</td>
+                        <td class="done">Done</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger ml-1"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                        <td>300$</td>
+                        <td class="canceled">Failed</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-danger ml-1"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </section>
+</body>
+</html>

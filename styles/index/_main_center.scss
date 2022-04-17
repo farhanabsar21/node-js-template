@@ -1,52 +1,42 @@
 @import '../variables';
 
 .main-center{
-    width: 100%;
-    height: 100%;
+    width: calc(100vw - 250px);
+    min-height: calc(max(100vh, 700px));
     background-color: #ecf2f9;
-    padding: 2.5%;
+    padding: 50px;
+    margin-left: 250px;
+    position: relative;
     &-header{
-        width: 100%;
-        padding: 1% 2%;
-        background-color: $white;
-        border-radius: 10px;
-        ul{
-            margin-top: 15px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            li{
-                width: 100px;
-                padding: 10px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: column;
-                .avatar-container{
-                    height: 60px;
-                    width: 60px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                p{
-                    margin-top: 10px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $text;
-                }
+        height: 100px;
+        padding: 1% 50px;
+        background-color: $optional;
+        position: fixed;
+        width: calc(100vw - 250px);
+        top: 0;
+        left: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-content{
+            width: 200px;
+            img{
+                height: 60px;
+                width: 60px;
+                border-radius: 5px;
             }
+            p{
+                color: $primaryColor;
+            }
+        }
+        h3{
+            color: $white;
         }
     }
     .performance-container{
         margin-top: 2.5%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
         .performance{
             width: 100%;
@@ -68,13 +58,22 @@
             &:nth-child(3){
                 background-color: $pending;
             }
+            &:nth-child(4){
+                background-color: #0099cc;
+            }
             h3{
                 color: $primaryColor;
             }
         }
     }
-    .title-container{
-        margin-top: 3%;
+    .title-container-1{
+        margin-top: 100px;
+        h6{
+            color: $title;
+        }
+    }
+    .title-container-2{
+        margin-top: 50px;
         h6{
             color: $title;
         }
@@ -85,7 +84,7 @@
         grid-template-columns: 1fr 1fr 2fr;
         gap: 15px;
         .daily-post{
-            max-height: 280px;
+            max-height: 300px;
             background-color: $white;
             border-radius: 10px;
             cursor: pointer;
