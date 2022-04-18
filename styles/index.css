@@ -88,7 +88,7 @@ a {
   text-decoration: none;
 }
 
-button, input, textarea, select {
+input, textarea, select {
   width: 100%;
   outline: 0;
   border: 0;
@@ -97,10 +97,11 @@ button, input, textarea, select {
   border-radius: 5px;
   color: #888;
   background-color: #fff;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
-  button, input, textarea, select {
+  input, textarea, select {
     font-size: 16px;
   }
 }
@@ -110,8 +111,7 @@ ul li {
 }
 
 .active {
-  -webkit-box-shadow: 5px 5px 5px rgba(199, 38, 91, 0.1);
-          box-shadow: 5px 5px 5px rgba(199, 38, 91, 0.1);
+  color: #444;
 }
 
 .user-active {
@@ -147,6 +147,12 @@ ul li {
           justify-content: space-between;
 }
 
+button {
+  font-family: 'Ubuntu', sans-serif;
+  outline: 0;
+  border: 0;
+}
+
 .btn {
   outline: 0;
   border: 0;
@@ -176,7 +182,7 @@ ul li {
 }
 
 .btn-danger {
-  background-color: #ff6666;
+  background-color: #ff3333;
   color: #fff;
 }
 
@@ -186,7 +192,7 @@ ul li {
 }
 
 .btn-pending {
-  background-color: #ffe6b3;
+  background-color: #ffbb33;
   color: #fff;
 }
 
@@ -209,6 +215,9 @@ ul li {
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
+  scrollbar-color: #c7265b #fff;
+  scrollbar-width: thin;
 }
 
 .aside-left .logo-container {
@@ -243,7 +252,7 @@ ul li {
 }
 
 .aside-left .title-container h6 {
-  color: #c0e7f1;
+  color: #0099cc;
 }
 
 .aside-left .menu-list {
@@ -265,17 +274,11 @@ ul li {
 }
 
 .aside-left .menu-list ul li {
-  width: 100%;
   padding: 16px 32px;
   margin-top: 10px;
   border-radius: 8px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.aside-left .menu-list ul li:hover {
-  -webkit-box-shadow: 5px 5px 5px rgba(199, 38, 91, 0.1);
-          box-shadow: 5px 5px 5px rgba(199, 38, 91, 0.1);
 }
 
 .aside-left .menu-list ul li:hover a {
@@ -289,6 +292,35 @@ ul li {
 
 .aside-left .menu-list ul li a i {
   padding-right: 10px;
+}
+
+.aside-left .menu-list ul button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  outline: 0;
+  border: 0;
+  padding: 10px 32px;
+  color: #888;
+  font-size: calc(8px + 0.5vw);
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.aside-left .menu-list ul .append {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 32px;
+  margin-left: 20px;
+  display: none;
+  -webkit-animation: 0.2s opacity;
+          animation: 0.2s opacity;
+  margin-top: 0;
+  font-size: calc(8px + 0.5vw);
 }
 
 .aside-left .post-list {
@@ -392,6 +424,24 @@ ul li {
   cursor: pointer;
 }
 
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-center {
   width: calc(100vw - 250px);
   min-height: calc(max(100vh, 700px));
@@ -404,7 +454,7 @@ ul li {
 .main-center-header {
   height: 100px;
   padding: 1% 50px;
-  background-color: #c0e7f1;
+  background-color: #0099cc;
   position: fixed;
   width: calc(100vw - 250px);
   top: 0;
@@ -422,16 +472,48 @@ ul li {
 
 .main-center-header-content {
   width: 200px;
+  position: relative;
 }
 
 .main-center-header-content img {
   height: 60px;
   width: 60px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .main-center-header-content p {
-  color: #c7265b;
+  color: #fff;
+  font-weight: 500;
+}
+
+.main-center-header-content .profile-container {
+  display: none;
+  position: absolute;
+  width: 200px;
+  padding: 2.5%;
+  background-color: #fff;
+  top: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-animation: opacity 0.3s;
+          animation: opacity 0.3s;
+}
+
+.main-center-header-content .profile-container ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.main-center-header-content .profile-container ul li a {
+  color: #888;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-center-header-content .profile-container ul li a:hover {
+  color: #444;
 }
 
 .main-center-header h3 {
@@ -512,7 +594,7 @@ ul li {
 }
 
 .main-center .latest-posts .daily-post {
-  max-height: 300px;
+  height: 400px;
   background-color: #fff;
   border-radius: 10px;
   cursor: pointer;
@@ -557,7 +639,7 @@ ul li {
   background-color: #fff;
   border-radius: 10px;
   overflow-y: scroll;
-  max-height: 280px;
+  height: 400px;
   scrollbar-color: #c7265b #fff;
   scrollbar-width: thin;
 }
@@ -601,6 +683,15 @@ ul li {
 .main-center .latest-posts .daily-checklist ul li p {
   margin-top: 5px;
   color: #888;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .main-container {

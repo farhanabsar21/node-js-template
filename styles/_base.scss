@@ -70,7 +70,7 @@ a{
     text-decoration: none;
 }
 
-button, input, textarea, select{
+input, textarea, select{
     width: 100%;
     outline: 0;
     border: 0;
@@ -79,6 +79,7 @@ button, input, textarea, select{
     border-radius: 5px;
     color: $text;
     background-color: $white;
+    font-family: 'Ubuntu', sans-serif;
     @media screen and (max-width: 600px) {
         font-size: 16px;
     }
@@ -91,7 +92,7 @@ ul{
 }
 
 .active{
-    box-shadow: 5px 5px 5px rgba($color: $primaryColor, $alpha: 0.1);
+    color: $title;
 }
 
 .user-active{
@@ -121,6 +122,12 @@ ul{
     justify-content: space-between;
 }
 
+button{
+    font-family: 'Ubuntu', sans-serif;
+    outline: 0;
+    border: 0;
+}
+
 .btn{
     outline: 0;
     border: 0;
@@ -141,7 +148,7 @@ ul{
 }
 
 .btn-danger{
-    background-color: $error;
+    background-color: #ff3333;
     color: $white;
 }
 
@@ -151,7 +158,7 @@ ul{
 }
 
 .btn-pending{
-    background-color: $pending;
+    background-color: #ffbb33;
     color: $white;
 }
 
@@ -166,3 +173,4 @@ ul{
 .canceled{
     color: $error;
 }
+
