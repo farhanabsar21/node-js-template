@@ -13,6 +13,7 @@ html{
 }
 
 body{
+    overflow-x: hidden;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1;
 }
@@ -70,7 +71,7 @@ a{
     text-decoration: none;
 }
 
-button, input, select{
+input, textarea, select{
     width: 100%;
     outline: 0;
     border: 0;
@@ -79,6 +80,7 @@ button, input, select{
     border-radius: 5px;
     color: $text;
     background-color: $white;
+    font-family: 'Ubuntu', sans-serif;
     @media screen and (max-width: 600px) {
         font-size: 16px;
     }
@@ -91,7 +93,7 @@ ul{
 }
 
 .active{
-    box-shadow: 5px 5px 5px rgba($color: $primaryColor, $alpha: 0.1);
+    color: $title;
 }
 
 .user-active{
@@ -106,3 +108,70 @@ ul{
 .px-10{
     padding: 0 10px;
 }
+
+.pxy-15{
+    padding: 15px;
+}
+
+.ml-1{
+    margin-left: 10px;
+}
+
+.flex-around{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button{
+    font-family: 'Ubuntu', sans-serif;
+    outline: 0;
+    border: 0;
+}
+
+.btn{
+    outline: 0;
+    border: 0;
+    width: fit-content;
+    padding: 10px 30px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn-primary{
+    background-color: #005ce6;
+    color: $white;
+}
+
+.btn-danger{
+    background-color: #ff3333;
+    color: $white;
+}
+
+.btn-submit{
+    background-color: #00b359;
+    color: $white;
+}
+
+.btn-pending{
+    background-color: #ffbb33;
+    color: $white;
+}
+
+.done{
+    color: $active;
+}
+
+.pending{
+    color: $pending;
+}
+
+.canceled{
+    color: $error;
+}
+

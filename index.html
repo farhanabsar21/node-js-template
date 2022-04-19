@@ -20,9 +20,12 @@
             </section>
             <section class="menu-list">
                 <ul>
-                    <li class="active"><a href="#"><i class="bi bi-columns-gap"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Post</a></li>
-                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Blog</a></li>
+                    <li><a href="#"><i class="bi bi-columns-gap"></i> Dashboard</a></li>
+                    <button id="accordion"><i class="bi bi-plus-lg"></i> Add Post</button>
+                    <li class="append"><a href="#">Add Post</a></li>
+                    <button id="accordion"><i class="bi bi-plus-lg"></i> Add Blog</button>
+                    <li class="append"><a href="#"> Add Blog</a></li>
+                    <li><a href="#"><i class="bi bi-pencil-square"></i> Edit</a></li>
                 </ul>
             </section>
             <section class="title-container">
@@ -41,34 +44,22 @@
         </aside>
         <main class="main-center">
             <section class="main-center-header">
-                <ul>
-                    <li>
-                        <div class="avatar-container user-active">
-                            <img src="./assets/players/iniesta.jpg" alt="">
-                        </div>
-                        <p>A. Iniesta</p>
-                    </li>
-                    <li>
-                        <div class="avatar-container">
-                            <img src="./assets/players/messi.jpg" alt="">
-                        </div>
-                        <p>L. Messi</p>
-                    </li>
-                    <li>
-                        <div class="avatar-container">
-                            <img src="./assets/players/xavi.jpg" alt="">
-                        </div>
-                        <p>Xavi Hernandez</p>
-                    </li>
-                    <li>
-                        <div class="avatar-container">
-                            <img src="./assets/players/rooney.jpg" alt="">
-                        </div>
-                        <p>W. Rooney</p>
-                    </li>
-                </ul>
+                <div>
+                    <h3>Dashboard</h3>
+                </div>
+                <div class="main-center-header-content flex-around">
+                    <p>Welcome, Admin</p>
+                    <img src="./assets/players/ibrahimovic.jpg" alt="" id="profileBtn">
+                    <div class="profile-container" id="profileContainer">
+                        <ul>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Edit Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <section class="title-container">
+            <section class="title-container-1">
                 <h6>Recent Activity</h6>
             </section>
             <section class="performance-container">
@@ -84,8 +75,12 @@
                     <h5>Service Maintenance</h5>
                     <h3>50+</h3>
                 </div>
+                <div class="performance">
+                    <h5>Service Maintenance</h5>
+                    <h3>50+</h3>
+                </div>
             </section>
-            <section class="title-container">
+            <section class="title-container-2">
                 <h6>Daily Checklist</h6>
             </section>
             <section class="latest-posts">
@@ -149,29 +144,7 @@
                 </div>
             </section>
         </main>
-        <aside class="aside-right">
-            <div class="profile-header">
-                <div>
-                    <h5>Hi, Admin!</h5>
-                    <p>Good Morning!</p>
-                </div>
-                <div>
-                    <img src="./assets/players/ibrahimovic.jpg" alt="">
-                </div>
-            </div>
-            <div class="featured">
-                <h5>Today's Featured</h5>
-            </div>
-            <div class="profile-body">
-                <div class="featured-img-container">
-                    <img src="./assets/featured.jpg" alt="">
-                </div>
-                <div>
-                    <h6>Mountain With The Sound</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero similique accusantium nihil officia cupiditate!</p>
-                </div>
-            </div>
-        </aside>
     </section>
+    <script src="./scripts/accordion.js"></script>
 </body>
 </html>

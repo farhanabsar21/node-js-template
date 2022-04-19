@@ -33,39 +33,46 @@
             color: $white;
         }
     }
-    &-body{
-        margin-top: 10px;
-        padding: 2.5% 0;
-        form{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+    .listings-container{
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
             width: 100%;
-            @media screen and (max-width:600px) {
-                width: 100%;
-                grid-template-columns: 1fr;
+            margin-top: 20px;
+            td, th {
+                border-top: 1px solid $border;
+                text-align: left;
+                padding: 15px;
             }
-            .input-container{
-                margin-top: 10px;
-                label{
-                    display: block;
-                    color: $title;
-                    padding: 10px 0;
-                }
-                input{
-                    width: 100%;
-                }
-                textarea{
-                    height: 200px;
-                }
+            td{
+                color: $text;
             }
-            .input-container-checkbox{
-                input{
-                    width: 20px;
-                    height: 20px;
-                    border: 0;
-                    outline: 0;
-                }
+            th{
+                color: $primaryColor;
             }
+            .done{
+                color: $active;
+            }
+            
+            .pending{
+                color: $pending;
+            }
+            
+            .canceled{
+                color: $error;
+            }
+        }
+    }
+    .title-container-1{
+        margin-top: 100px;
+        h6{
+            color: $title;
+        }
+    }
+    .title-container-2{
+        margin-top: 50px;
+        h6{
+            color: $title;
         }
     }
 }

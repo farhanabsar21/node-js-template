@@ -1,52 +1,69 @@
 @import '../variables';
 
 .main-center{
-    width: 100%;
-    height: 100%;
+    width: calc(100vw - 250px);
+    min-height: calc(max(100vh, 700px));
     background-color: #ecf2f9;
-    padding: 2.5%;
+    padding: 50px;
+    margin-left: 250px;
+    position: relative;
     &-header{
-        width: 100%;
-        padding: 1% 2%;
-        background-color: $white;
-        border-radius: 10px;
-        ul{
-            margin-top: 15px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            li{
-                width: 100px;
-                padding: 10px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: column;
-                .avatar-container{
-                    height: 60px;
-                    width: 60px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+        height: 100px;
+        padding: 1% 50px;
+        background-color: $optional;
+        position: fixed;
+        width: calc(100vw - 250px);
+        top: 0;
+        left: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-content{
+            width: 200px;
+            position: relative;
+            img{
+                height: 60px;
+                width: 60px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            p{
+                color: $white;
+                font-weight: 500;
+            }
+            .profile-container{
+                display: none;
+                position: absolute;
+                width: 200px;
+                padding: 2.5%;
+                background-color: $white;
+                top: 100%;
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+                animation: opacity 0.3s;
+                ul{
+                    li{
+                        padding: 15px;
+                        text-align: center;
+                        a{
+                            color: $text;
+                            transition: 0.3s;
+                            &:hover{
+                                color: $title;
+                            }
+                        }
                     }
                 }
-                p{
-                    margin-top: 10px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $text;
-                }
             }
+        }
+        h3{
+            color: $white;
         }
     }
     .performance-container{
         margin-top: 2.5%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
         .performance{
             width: 100%;
@@ -68,13 +85,22 @@
             &:nth-child(3){
                 background-color: $pending;
             }
+            &:nth-child(4){
+                background-color: #0099cc;
+            }
             h3{
                 color: $primaryColor;
             }
         }
     }
-    .title-container{
-        margin-top: 3%;
+    .title-container-1{
+        margin-top: 100px;
+        h6{
+            color: $title;
+        }
+    }
+    .title-container-2{
+        margin-top: 50px;
         h6{
             color: $title;
         }
@@ -85,7 +111,7 @@
         grid-template-columns: 1fr 1fr 2fr;
         gap: 15px;
         .daily-post{
-            max-height: 280px;
+            height: max(400px, 300px);
             background-color: $white;
             border-radius: 10px;
             cursor: pointer;
@@ -123,7 +149,7 @@
             background-color: $white;
             border-radius: 10px;
             overflow-y: scroll;
-            max-height: 280px;
+            height: max(400px, 300px);
             scrollbar-color: $primaryColor $white;
             scrollbar-width: thin;
             ul{
@@ -156,5 +182,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
