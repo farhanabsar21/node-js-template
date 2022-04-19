@@ -539,9 +539,7 @@ ul li {
   height: 100%;
   padding: 5%;
   background-color: #fff;
-  position: fixed;
-  right: 0;
-  top: 0;
+  position: relative;
 }
 
 .aside-right .profile-header {
@@ -611,8 +609,8 @@ ul li {
   min-height: calc(max(100vh, 700px));
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 1fr 300px;
-      grid-template-columns: 300px 1fr 300px;
+  -ms-grid-columns: 20% 1fr 20%;
+      grid-template-columns: 20% 1fr 20%;
 }
 
 @media screen and (max-width: 600px) {
