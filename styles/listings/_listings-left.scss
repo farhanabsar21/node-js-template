@@ -7,6 +7,9 @@
     position: fixed;
     top: 0;
     left: 0;
+    overflow-y: scroll;
+    scrollbar-color: $primaryColor $white;
+    scrollbar-width: thin;
     .logo-container{
         height: 120px;
         display: flex;
@@ -35,13 +38,11 @@
             padding: 5% 2.5% 10% 2.5%;
             border-bottom: 1px solid $border;
             li{
-                width: 100%;
                 padding: 16px 32px;
                 margin-top: 10px;
                 border-radius: 8px;
                 transition: 0.3s;
                 &:hover{
-                    box-shadow: 5px 5px 5px rgba($color: $primaryColor, $alpha: 0.1);
                     a{
                         color: $title;
                     }
@@ -53,6 +54,28 @@
                         padding-right: 10px;
                     }
                 }
+            }
+            button{
+                width: fit-content;
+                outline: 0;
+                border: 0;
+                padding: 10px 32px;
+                color: $text;
+                font-size: calc(8px + 0.5vw);
+                font-weight: 500;
+                cursor: pointer;
+                display: block;
+                background-color: $white;
+                margin-top: 10px;
+            }
+            .append{
+                width: fit-content;
+                padding: 10px 32px;
+                margin-left: 10px;
+                display: none;
+                animation: 0.2s opacity;
+                margin-top: 0;
+                font-size: calc(8px + 0.5vw);
             }
         }
     }
@@ -123,5 +146,14 @@
             justify-content: center;
             cursor: pointer;
         }
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

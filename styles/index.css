@@ -208,6 +208,13 @@ button {
   color: #ff6666;
 }
 
+.section-container {
+  margin-top: 100px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+
 .aside-left {
   width: 250px;
   height: 100vh;
@@ -315,7 +322,7 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 32px;
-  margin-left: 20px;
+  margin-left: 10px;
   display: none;
   -webkit-animation: 0.2s opacity;
           animation: 0.2s opacity;
@@ -561,7 +568,7 @@ button {
 }
 
 .main-center .performance-container .performance:nth-child(4) {
-  background-color: #0099cc;
+  background-color: #fff;
 }
 
 .main-center .performance-container .performance h3 {

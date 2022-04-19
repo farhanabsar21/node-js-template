@@ -20,13 +20,40 @@
         justify-content: space-between;
         &-content{
             width: 200px;
+            position: relative;
             img{
                 height: 60px;
                 width: 60px;
                 border-radius: 5px;
+                cursor: pointer;
             }
             p{
-                color: $primaryColor;
+                color: $white;
+                font-weight: 500;
+            }
+            .profile-container{
+                display: none;
+                position: absolute;
+                width: 200px;
+                padding: 2.5%;
+                background-color: $white;
+                top: 100%;
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+                animation: opacity 0.3s;
+                ul{
+                    li{
+                        padding: 15px;
+                        text-align: center;
+                        a{
+                            color: $text;
+                            transition: 0.3s;
+                            &:hover{
+                                color: $title;
+                            }
+                        }
+                    }
+                }
             }
         }
         h3{
@@ -40,7 +67,6 @@
             width: 100%;
             margin-top: 20px;
             td, th {
-                border-top: 1px solid $border;
                 text-align: left;
                 padding: 15px;
             }
@@ -55,7 +81,7 @@
             }
             
             .pending{
-                color: $pending;
+                color: $yellow;
             }
             
             .canceled{
@@ -64,7 +90,6 @@
         }
     }
     .title-container-1{
-        margin-top: 100px;
         h6{
             color: $title;
         }

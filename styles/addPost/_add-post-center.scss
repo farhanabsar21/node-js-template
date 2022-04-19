@@ -20,13 +20,40 @@
         justify-content: space-between;
         &-content{
             width: 200px;
+            position: relative;
             img{
                 height: 60px;
                 width: 60px;
                 border-radius: 5px;
+                cursor: pointer;
             }
             p{
-                color: $primaryColor;
+                color: $white;
+                font-weight: 500;
+            }
+            .profile-container{
+                display: none;
+                position: absolute;
+                width: 200px;
+                padding: 2.5%;
+                background-color: $white;
+                top: 100%;
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+                animation: opacity 0.3s;
+                ul{
+                    li{
+                        padding: 15px;
+                        text-align: center;
+                        a{
+                            color: $text;
+                            transition: 0.3s;
+                            &:hover{
+                                color: $title;
+                            }
+                        }
+                    }
+                }
             }
         }
         h3{
@@ -53,9 +80,14 @@
                 }
                 input{
                     width: 100%;
+                    background-color: $border;
                 }
                 textarea{
                     height: 200px;
+                    background-color: $border;
+                }
+                select, option{
+                    background-color: $border;
                 }
             }
             .input-container-checkbox{
@@ -64,6 +96,7 @@
                     height: 20px;
                     border: 0;
                     outline: 0;
+                    background-color: $border;
                 }
             }
         }

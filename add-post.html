@@ -20,9 +20,12 @@
             </section>
             <section class="menu-list">
                 <ul>
-                    <li class="active"><a href="#"><i class="bi bi-columns-gap"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Post</a></li>
-                    <li><a href="#"><i class="bi bi-plus-lg"></i> Add Blog</a></li>
+                    <li><a href="#"><i class="bi bi-columns-gap"></i> Dashboard</a></li>
+                    <button id="accordion"><i class="bi bi-plus-lg"></i> Add Post</button>
+                    <li class="append"><a href="#"><i class="bi bi-dot"></i>Add Post</a></li>
+                    <button id="accordion"><i class="bi bi-plus-lg"></i> Add Blog</button>
+                    <li class="append"><a href="#"><i class="bi bi-dot"></i>Add Blog</a></li>
+                    <li><a href="#"><i class="bi bi-pencil-square"></i> Edit</a></li>
                 </ul>
             </section>
             <section class="title-container">
@@ -42,68 +45,78 @@
         <main class="main-center">
             <section class="main-center-header">
                 <div>
-                    <h3>Add Post</h3>
+                    <h3>Dashboard</h3>
                 </div>
                 <div class="main-center-header-content flex-around">
-                    <p>welcome, Admin</p>
-                    <img src="./assets/players/ibrahimovic.jpg" alt="">
+                    <p>Welcome, Admin</p>
+                    <img src="./assets/players/ibrahimovic.jpg" alt="" id="profileBtn">
+                    <div class="profile-container" id="profileContainer">
+                        <ul>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Edit Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <div class="main-center-body">
-                <form>
-                    <!-- form left -->
-                    <div class="pxy-15">
-                        <div class="input-container">
-                            <label>Title:</label>
-                            <input type="text" placeholder="type your title..">
+                <div class="section-container">
+                    <form>
+                        <!-- form left -->
+                        <div class="pxy-15">
+                            <div class="input-container">
+                                <label>Title:</label>
+                                <input type="text" placeholder="type your title..">
+                            </div>
+                            <div class="input-container">
+                                <label>Email:</label>
+                                <input type="email" placeholder="type your email..">
+                            </div>
+                            <div class="input-container">
+                                <label>Options:</label>
+                                <select>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <div class="input-container">
+                                <label>URL:</label>
+                                <input type="url" placeholder="type your link..">
+                            </div>
+                            <div class="input-container">
+                                <label>Date:</label>
+                                <input type="date" placeholder="type your link..">
+                            </div>
+                            <div class="input-container">
+                                <label>File:</label>
+                                <input type="file" />
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Add</button>
+                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-submit">Submit</button>
+                                <button class="btn btn-pending">Edit</button>
+                            </div>
                         </div>
-                        <div class="input-container">
-                            <label>Email:</label>
-                            <input type="email" placeholder="type your email..">
+                        <!-- form right -->
+                        <div class="pxy-15">
+                            <div class="input-container input-container-checkbox">
+                                <label>Mark:</label>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="input-container">
+                                <label>Text:</label>
+                                <textarea type="text" placeholder="type your text.."/>
+                            </div>
                         </div>
-                        <div class="input-container">
-                            <label>Options:</label>
-                            <select>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                        </div>
-                        <div class="input-container">
-                            <label>URL:</label>
-                            <input type="url" placeholder="type your link..">
-                        </div>
-                        <div class="input-container">
-                            <label>Date:</label>
-                            <input type="date" placeholder="type your link..">
-                        </div>
-                        <div class="input-container">
-                            <label>File:</label>
-                            <input type="file" />
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Add</button>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-submit">Submit</button>
-                            <button class="btn btn-pending">Edit</button>
-                        </div>
-                    </div>
-                    <!-- form right -->
-                    <div class="pxy-15">
-                        <div class="input-container input-container-checkbox">
-                            <label>Mark:</label>
-                            <input type="checkbox">
-                            <input type="checkbox">
-                            <input type="checkbox">
-                        </div>
-                        <div class="input-container">
-                            <label>Text:</label>
-                            <textarea type="text" placeholder="type your text.."/>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </main>
     </section>
+    <script src="./scripts/accordion.js"></script>
 </body>
 </html>
